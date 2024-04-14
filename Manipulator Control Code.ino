@@ -41,14 +41,14 @@ void loop() {
     
     servo9.write(0);  // servo at 0 degrees
     servo10.write(0);  // servo at 0 degrees
-    servo11.write(0); // servo at 270 degrees bc its flipped in the assembly, is the equivalent 0 (these servos have 270 degrees of motion, input of 127 represents it for some reason)
+    servo11.write(127); // servo at 270 degrees bc it's flipped in the assembly, is the equivalent 0 (these servos have 270 degrees of motion, input of 127 represents it)
     }
 
-    else if (buttonState == LOW) { // if the button is pressed get the motors to pull the cables to their completly closed positions
+    else if (buttonState == LOW) { // if the button is pressed get the motors to pull the cables to their completely closed positions
     
     servo9.write(127); // servo at 270 degrees, fully pulls cable 1
     servo10.write(127); // servo at 270 degrees, fully pulls cable 2
-    servo11.write(127); // servo at 0 degrees, fully pulls cable 3
+    servo11.write(0); // servo at 0 degrees, fully pulls cable 3
     }
 
   }
